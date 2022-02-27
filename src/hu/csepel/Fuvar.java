@@ -14,9 +14,9 @@ public class Fuvar {
         this.taxiAzonosito = Integer.parseInt(data[0]);
         this.indulasIdopont = data[1];
         this.utazasIdotartam = Integer.parseInt(data[2]);
-        this.megtettTavolsag = Double.parseDouble(data[3]);
-        this.viteldij = Double.parseDouble(data[4]);
-        this.borravalo = Double.parseDouble(data[5]);
+        this.megtettTavolsag = Double.parseDouble(data[3].replace(",", "."));
+        this.viteldij = Double.parseDouble(data[4].replace(",", "."));
+        this.borravalo = Double.parseDouble(data[5].replace(",", "."));
         this.fizetesMod = data[6];
     }
 
@@ -78,7 +78,7 @@ public class Fuvar {
 
     @Override
     public String toString() {
-        return String.format("%-8d %-20s %5d %.2f %.2f %.2f %s",
+        return String.format("%-8d %-20s %10d mp %10.2f m %10.2f $ %10.2f $ %12s",
                 taxiAzonosito, indulasIdopont, utazasIdotartam, megtettTavolsag, viteldij, borravalo, fizetesMod);
     }
 }
