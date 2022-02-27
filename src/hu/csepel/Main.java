@@ -24,5 +24,6 @@ public class Main {
             System.out.println("\t" + fuvar);
         }
         System.out.println(String.format("10. feladat: December 24.-én %d darab fuvar volt.", fuvarok.getHanyFuvarIdopont("12-24")));
+        System.out.println(String.format("11. feladat: December 31.-én %.2f arányban adtak borravalót.", fuvarok.getBorravaloAranyIdopont("12-31")));
     }
 }

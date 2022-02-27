@@ -126,6 +126,14 @@ public class Fuvarok {
                 .count();
     }
 
+    //11. Feladat
+    public double getBorravaloAranyIdopont(String indulasIdopont) {
+        return fuvarList.stream()
+                .filter(fuvar -> fuvar.getIndulasIdopont().contains(indulasIdopont))
+                .mapToDouble(fuvar -> fuvar.getBorravalo() / fuvar.getViteldij())
+                .sum();
+    }
+
     @Override
     public String toString() {
         String s = "";
